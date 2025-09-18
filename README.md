@@ -84,7 +84,7 @@ As contribuições serão analisadas de acordo com:
 
 ## 📜 Termos e Condições
 
-1) A OUI Tecnologia se reserva o direito de **recusar recompensas** que não cumprirem os critérios mínimos definidos.
+1) A OUI Tec Ltda se reserva o direito de **recusar entregas** que não cumprirem os critérios mínimos definidos.
   
 2) Todo código enviado deve ser **autoral** e respeitar as licenças de terceiros.
   
