@@ -19,7 +19,7 @@ Identificou um problema em algum projeto público da OUI? Você pode ser recompe
 
 ### 📋 Critérios para Elegibilidade:
 - Válido para **qualquer projeto público da OUI** que não esteja arquivado
-- Limitado ao **máximo de 10 projetos por pessoa**
+- Limitado ao **máximo de 10 envios por pessoa**
 - O bug deve ser reproduzível e confirmado pela equipe
 - **Exceção para projetos Lua**: Projetos em Lua (com exceção do Darwin e VibeScript) funcionam exclusivamente no Lua 5.4 e Linux. Issues relacionadas à incompatibilidade com outros sistemas operacionais ou versões do Lua não serão consideradas elegíveis para recompensa
 
