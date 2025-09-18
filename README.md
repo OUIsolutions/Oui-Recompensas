@@ -51,7 +51,6 @@ As contribuições serão analisadas de acordo com:
 
 * Qualidade e clareza do código
 * Existência e consistência da documentação
-* Presença de testes que comprovem o funcionamento
 * Impacto positivo no projeto
 
 ## 🛠️ Ferramentas e Dependências
