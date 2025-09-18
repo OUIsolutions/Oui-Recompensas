@@ -21,8 +21,9 @@ Este arquivo JSON é responsável pelo gerenciamento automatizado de dependênci
 - Controle de versioning integrado
 
 ##### Types:
-**gitrelease**
-```json
+*gitrelease*
+Serve para pegar um arquivo direto das releases;
+json
 [
   {  
     "type": "gitrelease",
@@ -32,16 +33,28 @@ Este arquivo JSON é responsável pelo gerenciamento automatizado de dependênci
     "dest": "dependencies/Name_out_dependencie.extension"
   }
 ]
-```
-**url**
-```json
+
+*url*
+Serve para pegar um arquivo direto pela URL;
+json
 [
   {  
     "type": "url",
     "dest": "dependencies/Name_out_dependencie.extension"
   }
 ]
-```
+
+*gitrepo*
+Serve para clonar uma dependencia;
+json
+[
+  {  
+    "type": "gitrepo",
+    "repo": "owner/Name_repo",
+    "dest": "dependencies/",
+    "branch": "name_branch"
+  }
+]
 
 **Exemplo de configuração `darwindeps.json`:**
  ```json
