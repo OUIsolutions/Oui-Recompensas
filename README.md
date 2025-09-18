@@ -8,6 +8,33 @@ O **Sistema de Recompensas da OUI** é uma iniciativa estratégica que faz parte
 
 Todas as recompensas disponíveis podem ser encontradas na pasta **`Recompensas/`** deste repositório. Navegue pelos arquivos para conhecer os projetos disponíveis e suas respectivas recompensas.
 
+## 🐛 Sistema de Recompensas por Bugs
+
+### 🎯 Como Funciona
+Identificou um problema em algum projeto público da OUI? Você pode ser recompensado por reportar bugs!
+
+### 💸 Valores das Recompensas:
+- **R$ 20,00** - Projeto que não funciona no sistema operacional do usuário (quando suportado)
+- **R$ 5,00** - Funcionalidade específica que não funciona
+
+### 📋 Critérios para Elegibilidade:
+- Válido para **qualquer projeto público da OUI** que não esteja arquivado
+- Limitado ao **máximo de 10 projetos por pessoa**
+- O bug deve ser reproduzível e confirmado pela equipe
+
+### 🔄 Processo para Reportar:
+1. **Abra uma Issue** no repositório do projeto com problema
+2. **Descreva detalhadamente** o bug encontrado
+3. **Entre em contato via WhatsApp** com um membro da equipe de liderança
+4. **Aguarde a validação** da equipe técnica
+
+### ✅ Informações Necessárias na Issue:
+- Sistema operacional utilizado
+- Versão do projeto/software
+- Passos para reproduzir o problema
+- Comportamento esperado vs. comportamento atual
+- Screenshots/logs (se aplicável)
+
 ## �👥 Equipe de Liderança
 
 Nossa equipe de liderança é composta por profissionais experientes que avaliam e aprovam todas as recompensas:
@@ -79,33 +106,6 @@ As contribuições serão analisadas de acordo com:
 - Pull request aprovado
 
 ---
-
-## 🐛 Sistema de Recompensas por Bugs
-
-### 🎯 Como Funciona
-Identificou um problema em algum projeto público da OUI? Você pode ser recompensado por reportar bugs!
-
-### 💸 Valores das Recompensas:
-- **R$ 20,00** - Projeto que não funciona no sistema operacional do usuário (quando suportado)
-- **R$ 5,00** - Funcionalidade específica que não funciona
-
-### 📋 Critérios para Elegibilidade:
-- Válido para **qualquer projeto público da OUI** que não esteja arquivado
-- Limitado ao **máximo de 10 projetos por pessoa**
-- O bug deve ser reproduzível e confirmado pela equipe
-
-### 🔄 Processo para Reportar:
-1. **Abra uma Issue** no repositório do projeto com problema
-2. **Descreva detalhadamente** o bug encontrado
-3. **Entre em contato via WhatsApp** com um membro da equipe de liderança
-4. **Aguarde a validação** da equipe técnica
-
-### ✅ Informações Necessárias na Issue:
-- Sistema operacional utilizado
-- Versão do projeto/software
-- Passos para reproduzir o problema
-- Comportamento esperado vs. comportamento atual
-- Screenshots/logs (se aplicável)
 
 ---
 
