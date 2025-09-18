@@ -143,3 +143,5 @@ objeto global: `heregitage`
 valor: R$ 20 (20 reais)
 descrição: A lib for multprocess execution in comand line
 objeto global: `clpr` 
+
+prazo máximo para todos os projetos: 31 de outubro de 2025
