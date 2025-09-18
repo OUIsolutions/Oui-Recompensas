@@ -92,7 +92,7 @@ As contribuições serão analisadas de acordo com:
   
 4) Todos os projetos integrantes do OUI-RECOMPENSAS são opensource e de propriedade da OUI Tec Ltda.
   
-5) A participação no OUI-RECOMPENSAS não caracteriza vínculo de emprego em qualquer modalidade, vínculo societário ou transferẽncia de propriedade intelectual da OUI Tec Ltda para o participante.
+5) A participação no OUI-RECOMPENSAS não caracteriza vínculo de emprego em qualquer modalidade, vínculo societário ou transferência de propriedade intelectual da OUI Tec Ltda para o participante.
   
 6) O valor ofertado a título de recompensa não tem caráter de remuneração, tratando-se de mero estímulo à participação.
   
