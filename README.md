@@ -84,7 +84,7 @@ As contribuições serão analisadas de acordo com:
 
 ## 📜 Termos e Condições
 
-1) A OUI Tecnologia se reserva o direito de **recusar recompensas** que não cumprirem os critérios mínimos definidos.
+1) A OUI Tec Ltda se reserva o direito de **recusar entregas** que não cumprirem os critérios mínimos definidos.
   
 2) Todo código enviado deve ser **autoral** e respeitar as licenças de terceiros.
   
@@ -92,7 +92,7 @@ As contribuições serão analisadas de acordo com:
   
 4) Todos os projetos integrantes do OUI-RECOMPENSAS são opensource e de propriedade da OUI Tec Ltda.
   
-5) A participação no OUI-RECOMPENSAS não caracteriza vínculo de emprego em qualquer modalidade, vínculo societário ou transferẽncia de propriedade intelectual da OUI Tec Ltda para o participante.
+5) A participação no OUI-RECOMPENSAS não caracteriza vínculo de emprego em qualquer modalidade, vínculo societário ou transferência de propriedade intelectual da OUI Tec Ltda para o participante.
   
 6) O valor ofertado a título de recompensa não tem caráter de remuneração, tratando-se de mero estímulo à participação.
   
