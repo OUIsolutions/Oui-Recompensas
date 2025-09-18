@@ -20,6 +20,29 @@ Este arquivo JSON é responsável pelo gerenciamento automatizado de dependênci
 - Organização hierárquica de destinos personalizáveis
 - Controle de versioning integrado
 
+##### Types:
+**gitrelease**
+```json
+[
+  {  
+    "type": "gitrelease",
+    "repo": "owner/Name_repo",
+    "file": "release archive",
+    "tag":  "release version",
+    "dest": "dependencies/Name_out_dependencie.extension"
+  }
+]
+```
+**url**
+```json
+[
+  {  
+    "type": "url",
+    "dest": "dependencies/Name_out_dependencie.extension"
+  }
+]
+```
+
 **Exemplo de configuração `darwindeps.json`:**
  ```json
 [
