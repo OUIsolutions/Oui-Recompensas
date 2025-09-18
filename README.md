@@ -13,7 +13,7 @@ Nossa equipe de liderança é composta por profissionais experientes que avaliam
 
 - **Danilo Lima** - Diretor Jurídico e Membro Fundador
 
-- **Samuel Henrique** - Tech Lead e Head de Operações
+- **Samuel Henrique** - Tech Lead e Head de Operações </br>
   📱 WhatsApp: +55 (62)99111-7253
 
 ## 🎯 Como Funciona
