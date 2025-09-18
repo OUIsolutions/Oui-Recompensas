@@ -9,11 +9,12 @@ O **Sistema de Recompensas da OUI** é uma iniciativa estratégica que faz parte
 Nossa equipe de liderança é composta por profissionais experientes que avaliam e aprovam todas as recompensas:
 
 - **Mateus Moutinho** - Arquiteto de Software e Membro Fundador  
-  📱 WhatsApp: +55 11 98333-1701
+  📱 WhatsApp: +55 (11)98333-1701
 
 - **Danilo Lima** - Diretor Jurídico e Membro Fundador
 
 - **Samuel Henrique** - Tech Lead e Head de Operações
+  📱 WhatsApp: +55 (62)99111-7253
 
 ## 🎯 Como Funciona
 
