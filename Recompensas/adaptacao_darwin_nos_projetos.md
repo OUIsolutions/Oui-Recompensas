@@ -41,6 +41,7 @@ Serve para pegar um arquivo direto pela URL;
 [
   {  
     "type": "url",
+    "url":"link",
     "dest": "dependencies/Name_out_dependencie.extension"
   }
 ]
