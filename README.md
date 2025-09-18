@@ -1,28 +1,62 @@
-# Oui-Recompensas
-Repositório destinado ao sistema de Recompensas da OUI 
+# 🏆 Oui-Recompensas
 
-O Sistema de Recomepnsas da OUI faz parte do projeto  de horizontalização
-do desenvolvimento da OUI Tecnologia, visando a criação de um ecossistema
-auto expanssível para automação de processos e serviços.
-## Time de Liderança 
+## 📋 Sobre o Projeto
 
-Mateus Moutinho - Arquiteto de Software e membro fundador  +55 11 983331701
-Danilo Lima - Diretor Jurídico e membro fundador
-Samuel Henrique - Tech Lead e Head de Operações
+O **Sistema de Recompensas da OUI** é uma iniciativa estratégica que faz parte do projeto de horizontalização do desenvolvimento da OUI Tecnologia. Nosso objetivo é criar um ecossistema auto-expansível para automação de processos e serviços, incentivando a participação da comunidade de desenvolvedores através de recompensas por contribuições.
 
-## Regras
+## 👥 Equipe de Liderança
 
-- Cada Recompensa deve ser aprovada por um membro do time de liderança da OUI Tecnologia.
+Nossa equipe de liderança é composta por profissionais experientes que avaliam e aprovam todas as recompensas:
 
-- Cada Recompensa terá um prazo de validade, que será informado na descrição da Recompensa.
+- **Mateus Moutinho** - Arquiteto de Software e Membro Fundador  
+  📱 WhatsApp: +55 11 98333-1701
 
-- Para Resgatar uma Recompensa, envie um pull request para o repositório do
-projeto, e envie um whatsapp para um dos membros do time de liderança da OUI Tecnologia , informando sua solução.
+- **Danilo Lima** - Diretor Jurídico e Membro Fundador
 
-- Se estiver com 50% ou mais da conclusão do projeto, você pode enviar uma mensagem para um dos membros  do time de liderança, para que possamos marcar o projeto como em andamento por outro desenvolvedor, assim evitando retrabalhos de outros competidores. 
+- **Samuel Henrique** - Tech Lead e Head de Operações
 
-- Se estiver com 80% ou mais da conclusão do projeto, você pode enviar um whatsapp solicitando mais prazos para conclusão do projeto, que serão analisados caso a caso.
+## 🎯 Como Funciona
 
+### 1. Aprovação das Recompensas
+Todas as recompensas são criteriosamente avaliadas e aprovadas por um membro da equipe de liderança da OUI Tecnologia.
 
-## Pagamentos
-Você Obrigatoriamente deve ter um pix ou uma conta bancária brasileira para receber os pagamentos.
+### 2. Prazo de Validade
+Cada recompensa possui um prazo específico de validade, que será claramente informado na descrição da respectiva recompensa.
+
+## 📋 Regras e Diretrizes
+
+### Para Resgatar uma Recompensa:
+1. **Envie um Pull Request** para o repositório do projeto
+2. **Entre em contato via WhatsApp** com um dos membros da equipe de liderança
+3. **Informe sua solução** de forma clara e detalhada
+
+### Marcos de Progresso:
+
+#### 🏃‍♂️ 50% de Conclusão
+- Você pode solicitar que o projeto seja marcado como "em andamento"
+- Isso evita retrabalho de outros desenvolvedores
+- Entre em contato com a equipe de liderança
+
+#### 🏁 80% de Conclusão
+- Possibilidade de solicitar extensão de prazo
+- Cada caso será analisado individualmente
+- Contate a equipe via WhatsApp
+
+## 💰 Sistema de Pagamentos
+
+### ⚠️ Requisitos Obrigatórios:
+- **PIX** ou **Conta Bancária Brasileira** válida
+- Todos os pagamentos são processados exclusivamente no Brasil
+
+### 📄 Documentação Necessária:
+- Dados bancários corretos
+- Comprovante de conclusão do projeto
+- Pull request aprovado
+
+## 📞 Contato
+
+Para dúvidas, acompanhamento de projetos ou solicitações especiais, entre em contato com nossa equipe de liderança através dos canais oficiais mencionados acima.
+
+---
+
+**OUI Tecnologia** - Construindo o futuro da automação de processos e serviços.
