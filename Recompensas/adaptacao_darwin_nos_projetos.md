@@ -229,9 +229,10 @@ LICENSE = "MIT"
 darwin.load_all("builds")
 ```
 
-### Modos de Execução Suportados
+### Modos de Execução Legados
+Esses modos legados servem como base para entender os diferentes métodos de execução suportados pelo Darwin Build System.
 
-#### Modo Pasta (Recomendado)
+#### Modo Pasta
 Este modo utiliza uma estrutura de pasta organizada onde o Darwin carrega automaticamente todos os arquivos `.lua` da pasta `builds/`:
 
 **Comandos de exemplo:**
@@ -300,7 +301,6 @@ Os seguintes 23 projetos da organização OUISolutions devem ser migrados para o
 3. ✅ Pasta `builds/` com receitas modulares
 4. ✅ Chamada `darwin.load_all("builds")` implementada
 5. ✅ Compatibilidade com modos de execução existentes
-6. ✅ Testes de build funcionais em ambiente de desenvolvimento
 
 ### Entregáveis por Projeto
 - Estrutura de arquivos completa e funcional
