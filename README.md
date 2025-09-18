@@ -83,7 +83,7 @@ As contribuições serão analisadas de acordo com:
 
 ---
 
-## 📜 Termos e Condições ➕
+## 📜 Termos e Condições
 
 * A OUI Tecnologia se reserva o direito de **recusar recompensas** que não cumprirem os critérios mínimos definidos.
 * Todo código enviado deve ser **autoral** e respeitar as licenças de terceiros.
@@ -93,10 +93,5 @@ As contribuições serão analisadas de acordo com:
 ## 📞 Contato
 
 Para dúvidas, acompanhamento de projetos ou solicitações especiais, entre em contato com nossa equipe de liderança através dos canais oficiais mencionados acima.
-
----
-
-Perfeito 👍 Obrigado pelos esclarecimentos.
-Peguei o texto original que você me passou e implementei as mudanças, mantendo o mesmo estilo de formatação. Para você visualizar facilmente, marquei os **trechos novos ou modificados com ➕**.
 
 ---
