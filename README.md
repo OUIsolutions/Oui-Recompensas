@@ -4,7 +4,11 @@
 
 O **Sistema de Recompensas da OUI** é uma iniciativa estratégica que faz parte do projeto de horizontalização do desenvolvimento da OUI Tecnologia. Nosso objetivo é criar um ecossistema auto-expansível para automação de processos e serviços, incentivando a participação da comunidade de desenvolvedores através de recompensas por contribuições.
 
-## 👥 Equipe de Liderança
+## � Recompensas Disponíveis
+
+Todas as recompensas disponíveis podem ser encontradas na pasta **`Recompensas/`** deste repositório. Navegue pelos arquivos para conhecer os projetos disponíveis e suas respectivas recompensas.
+
+## �👥 Equipe de Liderança
 
 Nossa equipe de liderança é composta por profissionais experientes que avaliam e aprovam todas as recompensas:
 
