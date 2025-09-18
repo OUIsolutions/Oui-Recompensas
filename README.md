@@ -9,11 +9,12 @@ O **Sistema de Recompensas da OUI** é uma iniciativa estratégica que faz parte
 Nossa equipe de liderança é composta por profissionais experientes que avaliam e aprovam todas as recompensas:
 
 - **Mateus Moutinho** - Arquiteto de Software e Membro Fundador  
-  📱 WhatsApp: +55 11 98333-1701
+  📱 WhatsApp: +55 (11)98333-1701
 
 - **Danilo Lima** - Diretor Jurídico e Membro Fundador
 
-- **Samuel Henrique** - Tech Lead e Head de Operações
+- **Samuel Henrique** - Tech Lead e Head de Operações </br>
+  📱 WhatsApp: +55 (62)99111-7253
 
 ## 🎯 Como Funciona
 
@@ -42,6 +43,27 @@ Cada recompensa possui um prazo específico de validade, que será claramente in
 - Cada caso será analisado individualmente
 - Contate a equipe via WhatsApp
 
+---
+
+## 🧑‍💻 Critérios de Avaliação
+
+As contribuições serão analisadas de acordo com:
+
+* Qualidade e clareza do código
+* Existência e consistência da documentação
+* Presença de testes que comprovem o funcionamento
+* Impacto positivo no projeto
+
+## 🛠️ Ferramentas e Dependências
+
+* Todos os projetos devem ser desenvolvidos utilizando os **repositórios oficiais**, a **documentação da OUI** e os **guias de estilo de código** disponibilizados.
+* É obrigatório seguir utilizando dependências e bibliotecas já adotadas pela OUI ou **explicitamente permitidas** pela equipe de liderança.
+
+## ⏱️ Prazos e Avaliação
+
+* O tempo para revisar um PR, aprovar um pagamento e fornecer feedback **dependerá da complexidade da tarefa atribuída**.
+* Sempre será informado na documentação de cada projeto **qual o prazo estimado de análise e retorno**.
+
 ## 💰 Sistema de Pagamentos
 
 ### ⚠️ Requisitos Obrigatórios:
@@ -53,10 +75,23 @@ Cada recompensa possui um prazo específico de validade, que será claramente in
 - Comprovante de conclusão do projeto
 - Pull request aprovado
 
+---
+
+## 🌟 Reconhecimento dos Contribuidores
+
+* Todos os desenvolvedores que concluírem suas contribuições com sucesso terão seus nomes listados no site ou repositório oficial de contribuidores da OUI Tecnologia.
+
+---
+
+## 📜 Termos e Condições
+
+* A OUI Tecnologia se reserva o direito de **recusar recompensas** que não cumprirem os critérios mínimos definidos.
+* Todo código enviado deve ser **autoral** e respeitar as licenças de terceiros.
+
+---
+
 ## 📞 Contato
 
 Para dúvidas, acompanhamento de projetos ou solicitações especiais, entre em contato com nossa equipe de liderança através dos canais oficiais mencionados acima.
 
 ---
-
-**OUI Tecnologia** - Construindo o futuro da automação de processos e serviços.
