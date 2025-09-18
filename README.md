@@ -84,8 +84,34 @@ As contribuições serão analisadas de acordo com:
 
 ## 📜 Termos e Condições
 
-* A OUI Tecnologia se reserva o direito de **recusar recompensas** que não cumprirem os critérios mínimos definidos.
-* Todo código enviado deve ser **autoral** e respeitar as licenças de terceiros.
+1) A OUI Tecnologia se reserva o direito de **recusar recompensas** que não cumprirem os critérios mínimos definidos.
+  
+2) Todo código enviado deve ser **autoral** e respeitar as licenças de terceiros.
+  
+3) A participação no OUI-RECOMPENSAS não está condicionada a qualquer critério de seleção, pagamento prévio de taxa de inscrição ou qualquer outro requisito.
+  
+4) Todos os projetos integrantes do OUI-RECOMPENSAS são opensource e de propriedade da OUI Tec Ltda.
+  
+5) A participação no OUI-RECOMPENSAS não caracteriza vínculo de emprego em qualquer modalidade, vínculo societário ou transferẽncia de propriedade intelectual da OUI Tec Ltda para o participante.
+  
+6) O valor ofertado a título de recompensa não tem caráter de remuneração, tratando-se de mero estímulo à participação.
+  
+7) O participante aceita que apenas terá direito à recompensa caso seja o primeiro a entregar e que o recebimento está condicionado à prévia validação das entregas, de acordo com as instruções fornecidas.
+  
+8) O participante aceita que a suas entregas passam a fazer parte do repositório do projeto de titularidade da OUI Tec Ltda.
+  
+9) O participante autoriza a inclusão do seu nome como colaborador do desenvolvimento na documentação do projeto relacionado à sua entrega.
+  
+10) A participação neste projeto é restrita a pessoas que não compõem o quadro de desenvolvedores da OUI Tec Ltda.
+  
+11) Caso algum desenvolvedor da OUI Tec Ltda participe do OUI-RECOMPENSAS será desclassificado, sua entrega não será incorporada ao projeto e não receberá a recompensa estipulada.
+  
+12) O participante pode desistir da participação a qualquer momento até a entrega. Realizada a entrega, o participante concede o direito a OUI Tec Ltda de utilizar o conteúdo entregue no repositório do projeto opensource do qual o participante tenha participado, desde que aprovada pela Equipe de Liderança e mediante o pagamento da recompensa estipulada.
+   
+13) Todos os participantes se sujeitam aos Termos e Condições aqui expostos.
+  
+14) Casos omissos na presente Documentação serão solucionados pela Equipe de Liderança e incluídos na presente documentação, cuja vinculação do participante será automática, sendo facultada a desistência a qualquer tempo, nos termos do item 12).
+
 
 ---
 
