@@ -352,5 +352,5 @@ Os seguintes 23 projetos da organização OUISolutions devem ser migrados para o
 
 **Documento de Especificação Técnica - v1.0**  
 **OUISolutions Build System Migration Project**  
-**Data:** Setembro 2025
+**Data:** 05 de Outubro de 2025
 
