@@ -1,12 +1,26 @@
-Este projeto, visa adaptar os projetos da oui para o novo formato
-do darwin:
-### Contexto:
-Para seguir como exemplo,vamos usar o prório [darwin](https://github.com/OUIsolutions/Darwin) como base.
-onde você tem dois arquivos principais:
- - `darwindeps.json` 
-arquivo responsável por gerenciar as dependencias do projeto, onde você tem 
-onde é possível passar as releases, e urls de outros projetos que serão usados como dependencias.
- exemplo de `darwindeps.json`:
+# Migração de Projetos OUI para o Darwin Build System
+
+## Visão Geral
+
+Este documento define as especificações técnicas e o escopo para a migração de 23 projetos da organização OUISolutions para o novo formato de build do Darwin. O objetivo principal é padronizar e modernizar o sistema de construção de todos os projetos, estabelecendo uma estrutura unificada baseada em arquivos de configuração específicos.
+
+## Contexto Técnico
+
+O Darwin Build System é uma ferramenta de automação de build que utiliza uma arquitetura modular baseada em dois arquivos principais de configuração. Para esta migração, utilizaremos o próprio repositório [Darwin](https://github.com/OUIsolutions/Darwin) como referência de implementação.
+
+### Estrutura do Sistema
+
+#### 1. Arquivo de Dependências (`darwindeps.json`)
+
+Este arquivo JSON é responsável pelo gerenciamento automatizado de dependências externas do projeto. Ele permite especificar releases do GitHub, URLs de repositórios e arquivos específicos que devem ser baixados e organizados automaticamente na estrutura do projeto.
+
+**Características principais:**
+- Suporte para releases específicas de repositórios GitHub
+- Download automatizado de arquivos de dependências
+- Organização hierárquica de destinos personalizáveis
+- Controle de versioning integrado
+
+**Exemplo de configuração `darwindeps.json`:**
  ```json
 [
     {
@@ -93,11 +107,19 @@ onde é possível passar as releases, e urls de outros projetos que serão usado
         "file": "lua_c_amalgamator_dependencie_not_included.c",
         "dest": "dependencies/lua_c_amalgamator_dependencie_not_included.c"
     }
-]
 ```
- - `darwinconf.lua`
-arquivo responsável por configurar o projeto, ele é o "blueprint" de cada
-projeto,onde você define as receitas de build.
+
+#### 2. Arquivo de Configuração Principal (`darwinconf.lua`)
+
+O arquivo `darwinconf.lua` serve como blueprint central do projeto, definindo todas as configurações essenciais e carregando as receitas de build de forma modular.
+
+**Responsabilidades:**
+- Definição de metadados do projeto (nome, versão, licença, etc.)
+- Configuração de parâmetros de build personalizáveis
+- Carregamento automático de receitas de build modulares
+- Integração com sistemas de containerização
+
+**Exemplo de configuração `darwinconf.lua`:**
 ```lua 
 PROJECT_NAME = "darwin"
 CONTANIZER   =  darwin.argv.get_flag_arg_by_index({ "contanizer", }, 1,"docker" ) 
@@ -110,19 +132,29 @@ EMAIL        = "mateusmoutinho01@gmail.com"
 SUMARY       = "A Runtime to work with llms"
 YOUR_CHANGES = "--"
 
-LAUNGUAGE     = "c"
-darwin.load_all("builds")
 ```
-nesse exemplo, ele esta definindo as configurações iniciais, e posteriormente carregando as receitas de build. onde cada receita pode ser
- buildada com 
+
+### Funcionalidades do Sistema
+
+#### Execução de Receitas Individuais
+As receitas de build podem ser executadas individualmente utilizando o seguinte comando:
+
 ```bash 
-darwin run_blueprint darwinconf.lua --target <receita> 
+darwin run_blueprint darwinconf.lua --target <nome_da_receita> 
 ```
-bem como todas as receitas podem ser listadas com:
+
+#### Listagem de Receitas Disponíveis
+Para visualizar todas as receitas disponíveis em um projeto:
+
 ```bash
 darwin list_blueprints 
 ```
-exemplo de receita: 
+
+#### Exemplo de Receita de Build
+
+As receitas são definidas como funções Lua que encapsulam toda a lógica de build, incluindo configuração de ambiente, compilação e empacotamento:
+
+```lua 
 ```lua
 
 function linux_bin()
@@ -153,61 +185,132 @@ darwin.add_recipe({
     description="make a static compiled linux binary of the project",
     outs={"release/darwin_linux_bin.out"},
     callback=linux_bin
-})
 ```
 
-### Objetivos:
-portar todos os projetos listados abaixo para o novo formato do darwin:
-contendo apenas  `darwindeps.json`(se nescessário) e um `darwinconf.lua` 
-que da um `darwin.load_all("builds")` em todas as receitas.
-lembre-se: cada receita devew ser um único arquivo `.lua` dentro da pasta `builds/`
+Esta receita demonstra:
+- Criação de ambiente isolado utilizando containers Alpine Linux
+- Configuração automática de dependências de compilação
+- Suporte multi-linguagem (C/C++)
+- Build estático para máxima portabilidade
+- Integração com sistema de volumes para output
 
+## Especificação Técnica da Migração
 
-### Dica 
-Normalmente os projetos da oui são buildados em dois formatos, o modo single file (darwinconf.lua) e o modo pasta
-- Modo pasta
-no modo pasta, os projetos normalmente são buildados com um comando como esses:
+### Objetivos Principais
+
+1. **Padronização**: Migrar todos os projetos listados para o formato uniforme do Darwin Build System
+2. **Modularização**: Implementar estrutura modular com arquivos `darwindeps.json` (quando necessário) e `darwinconf.lua`
+3. **Organização**: Reestruturar receitas de build como arquivos individuais `.lua` dentro da pasta `builds/`
+4. **Compatibilidade**: Manter compatibilidade com os modos de execução existentes
+
+### Arquitetura de Build
+
+#### Estrutura de Arquivos Requerida
+```
+projeto/
+├── darwindeps.json          # Opcional: somente se houver dependências externas
+├── darwinconf.lua          # Obrigatório: configuração principal
+└── builds/                 # Obrigatório: pasta de receitas
+    ├── receita1.lua
+    ├── receita2.lua
+    └── ...
+```
+
+#### Configuração Principal
+O arquivo `darwinconf.lua` deve incluir obrigatoriamente:
+```lua
+-- Configurações do projeto
+PROJECT_NAME = "nome_do_projeto"
+VERSION = "x.x.x"
+LICENSE = "MIT"
+-- ... outras configurações
+
+-- Carregamento automático de todas as receitas
+darwin.load_all("builds")
+```
+
+### Modos de Execução Suportados
+
+#### Modo Pasta (Recomendado)
+Este modo utiliza uma estrutura de pasta organizada onde o Darwin carrega automaticamente todos os arquivos `.lua` da pasta `builds/`:
+
+**Comandos de exemplo:**
 ```bash
+# Execução básica
 darwin run_blueprint build/ --mode folder
-```
-```bash
+
+# Execução com múltiplas receitas e containerização personalizada
 darwin run_blueprint build/ --mode folder amalgamation_build alpine_static_build windowsi32_build windows64_build rpm_static_build debian_static_build --contanizer podman
 ```
-onde o `build/` é a pasta onde o script de build,e o darwin carrega todos arquivos `.lua` dentro dela, de maneira aleatória, e após isso, ele chama a função main .
 
-- Modo single file (darwinconf.lua)
-no modo single file, o projeto é buildado com um comando como esse:
+**Características:**
+- Carregamento automático de todas as receitas `.lua` na pasta `builds/`
+- Execução da função `main()` após carregamento
+- Suporte para execução de receitas múltiplas em sequência
+
+#### Modo Arquivo Único
+Modo alternativo que utiliza o arquivo `darwinconf.lua` diretamente:
+
 ```bash
-darwin run_blueprint darwinconf.lua  <resto dos parametros>
+darwin run_blueprint darwinconf.lua <parâmetros_adicionais>
 ```
-Valor por Projeto Portado: R$ 18,00
-Valor Total : R$ 18 x 23 = R$ 414,00
-Atenção: 
-Submenta os portes um a um para ir obtendo os valores de pagamentos conforme 
-faz o porte, e evitando o risco de perder para a concorrência
 
-### Projetos a serem portados:
+## Informações Contratuais
 
-#### Lista Principal:
-1.  [VibeScript](https://github.com/OUIsolutions/VibeScript)
-2.  [CWebStudio](https://github.com/OUIsolutions/CWebStudio)
-3.  [DoTheWorld](https://github.com/OUIsolutions/DoTheWorld)
-4.  [LuaCEmbed](https://github.com/OUIsolutions/LuaCEmbed)
-5.  [BearHttpsClient](https://github.com/OUIsolutions/BearHttpsClient)
-6.  [LuaDoTheWorld](https://github.com/OUIsolutions/LuaDoTheWorld)
-7.  [Lua-bear](https://github.com/OUIsolutions/Lua-bear) 
-9.  [LuaWebDriver](https://github.com/OUIsolutions/LuaWebDriver)
-11. [CWebStudioFirmware](https://github.com/OUIsolutions/CWebStudioFirmware)
-12. [LuaSilverChain](https://github.com/OUIsolutions/LuaSilverChain)
-13. [clpr](https://github.com/OUIsolutions/clpr)
-14. [LuaSingleUnity](https://github.com/OUIsolutions/LuaSingleUnity)
-15. [C2Wasm](https://github.com/OUIsolutions/C2Wasm)
-16. [MDeclare](https://github.com/OUIsolutions/MDeclare)
-17. [CAmalgamator](https://github.com/OUIsolutions/CAmalgamator)
-18. [SilverChain](https://github.com/OUIsolutions/SilverChain)
-19. [LuaMDeclare](https://github.com/OUIsolutions/LuaMDeclare)
-20. [LuaShip](https://github.com/OUIsolutions/LuaShip)
-21. [PushBlind](https://github.com/OUIsolutions/PushBlind)
-22. [LuaArgv](https://github.com/OUIsolutions/LuaArgv)
-23. [Universal-Garbage-Colector](https://github.com/OUIsolutions/Universal-Garbage-Colector)
+### Estrutura de Pagamento
+- **Valor por projeto**: R$ 18,00
+- **Total de projetos**: 23
+- **Valor total do projeto**: R$ 414,00
+
+### Metodologia de Entrega
+**IMPORTANTE**: Os projetos devem ser submetidos individualmente para processamento gradual dos pagamentos e mitigação de riscos competitivos.
+
+## Escopo de Projetos
+
+### Lista de Projetos para Migração
+
+Os seguintes 23 projetos da organização OUISolutions devem ser migrados para o novo formato Darwin:
+1.  **[VibeScript](https://github.com/OUIsolutions/VibeScript)** - Runtime de desenvolvimento para integração com LLMs
+2.  **[CWebStudio](https://github.com/OUIsolutions/CWebStudio)** - Framework web em C para desenvolvimento full-stack
+3.  **[DoTheWorld](https://github.com/OUIsolutions/DoTheWorld)** - Biblioteca C para operações de sistema multiplataforma
+4.  **[LuaCEmbed](https://github.com/OUIsolutions/LuaCEmbed)** - Sistema de embedding Lua em aplicações C
+5.  **[BearHttpsClient](https://github.com/OUIsolutions/BearHttpsClient)** - Cliente HTTPS leve para C
+6.  **[LuaDoTheWorld](https://github.com/OUIsolutions/LuaDoTheWorld)** - Binding Lua para DoTheWorld
+7.  **[Lua-bear](https://github.com/OUIsolutions/Lua-bear)** - Wrapper Lua para BearHttpsClient
+8.  **[LuaWebDriver](https://github.com/OUIsolutions/LuaWebDriver)** - Automação de browsers via Lua
+9.  **[CWebStudioFirmware](https://github.com/OUIsolutions/CWebStudioFirmware)** - Firmware para CWebStudio
+10. **[LuaSilverChain](https://github.com/OUIsolutions/LuaSilverChain)** - Sistema de templates para Lua
+11. **[clpr](https://github.com/OUIsolutions/clpr)** - Parser de linha de comando para C
+12. **[LuaSingleUnity](https://github.com/OUIsolutions/LuaSingleUnity)** - Integração Unity-Lua
+13. **[C2Wasm](https://github.com/OUIsolutions/C2Wasm)** - Compilador C para WebAssembly
+14. **[MDeclare](https://github.com/OUIsolutions/MDeclare)** - Sistema de declaração de módulos C
+15. **[CAmalgamator](https://github.com/OUIsolutions/CAmalgamator)** - Amalgamador de arquivos C
+16. **[SilverChain](https://github.com/OUIsolutions/SilverChain)** - Sistema de templates C
+17. **[LuaMDeclare](https://github.com/OUIsolutions/LuaMDeclare)** - Binding Lua para MDeclare
+18. **[LuaShip](https://github.com/OUIsolutions/LuaShip)** - Sistema de deployment Lua
+19. **[PushBlind](https://github.com/OUIsolutions/PushBlind)** - Sistema de notificações push
+20. **[LuaArgv](https://github.com/OUIsolutions/LuaArgv)** - Parser de argumentos para Lua
+21. **[Universal-Garbage-Colector](https://github.com/OUIsolutions/Universal-Garbage-Colector)** - Coletor de lixo universal
+
+## Critérios de Aceitação
+
+### Requisitos Técnicos Obrigatórios
+1. ✅ Arquivo `darwinconf.lua` configurado corretamente
+2. ✅ Arquivo `darwindeps.json` presente quando necessário
+3. ✅ Pasta `builds/` com receitas modulares
+4. ✅ Chamada `darwin.load_all("builds")` implementada
+5. ✅ Compatibilidade com modos de execução existentes
+6. ✅ Testes de build funcionais em ambiente de desenvolvimento
+
+### Entregáveis por Projeto
+- Estrutura de arquivos completa e funcional
+- Documentação de configuração específica (se aplicável)
+- Validação de builds existentes
+- Relatório de migração resumido
+
+---
+
+**Documento de Especificação Técnica - v1.0**  
+**OUISolutions Build System Migration Project**  
+**Data:** Setembro 2025
 
