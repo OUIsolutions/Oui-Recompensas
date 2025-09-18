@@ -23,7 +23,7 @@ Este arquivo JSON é responsável pelo gerenciamento automatizado de dependênci
 ##### Types:
 *gitrelease*
 Serve para pegar um arquivo direto das releases;
-json
+```json
 [
   {  
     "type": "gitrelease",
@@ -33,20 +33,22 @@ json
     "dest": "dependencies/Name_out_dependencie.extension"
   }
 ]
+```
 
 *url*
 Serve para pegar um arquivo direto pela URL;
-json
+```json
 [
   {  
     "type": "url",
     "dest": "dependencies/Name_out_dependencie.extension"
   }
 ]
+```
 
 *gitrepo*
 Serve para clonar uma dependencia;
-json
+```json
 [
   {  
     "type": "gitrepo",
@@ -55,6 +57,7 @@ json
     "branch": "name_branch"
   }
 ]
+```
 
 **Exemplo de configuração `darwindeps.json`:**
  ```json
